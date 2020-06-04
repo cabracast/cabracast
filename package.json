@@ -11,7 +11,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -r https://$GITHUB_TOKEN@github.com/diogocezar/gatsby-simple-blog.git"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -r https://$GITHUB_TOKEN@github.com/cabracast/cabracast.git"
   },
   "dependencies": {
     "gatsby": "^2.18.12",
@@ -27,7 +27,7 @@
     "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
-    "prettier": "^1.19.1",
-    "gh-pages": "^2.1.1"
+    "gh-pages": "^2.1.1",
+    "prettier": "^1.19.1"
   }
 }
