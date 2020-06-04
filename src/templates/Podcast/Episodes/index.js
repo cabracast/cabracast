@@ -5,7 +5,8 @@ import * as S from "./styles"
 
 export const Episodes = ({ data: { markdownRemark } }) => {
   const { frontmatter, html } = markdownRemark
-  const { number, title, date, time, authors, download } = frontmatter
+  const { number, title, date, time, authors } = frontmatter
+  console.log(frontmatter)
   return (
     <>
       <SEO title={title} />
@@ -14,7 +15,6 @@ export const Episodes = ({ data: { markdownRemark } }) => {
       <p>{date}</p>
       <p>{time}</p>
       <p>{authors}</p>
-      <p>{download}</p>
       <div dangerouslySetInnerHTML={{ __html: html }} />
       <a href="/">Voltar</a>
     </>
@@ -31,7 +31,6 @@ export const pageQuery = graphql`
         number
         time
         authors
-        download
       }
     }
   }

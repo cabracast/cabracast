@@ -6,7 +6,6 @@ const IndexPage = ({ data }) => {
   const { pages, episodes } = data
   const { edges: dataPages } = pages
   const { edges: dataEpisodes } = episodes
-  console.log(dataPages)
   return (
     <>
       <SEO title="CabraCast" />
