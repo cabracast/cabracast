@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-simple-blog",
+  "name": "cabracast",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
+  "description": "Just our podcast website",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",

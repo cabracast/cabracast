@@ -19,22 +19,22 @@ module.exports = {
           "@pages": "src/pages",
           "@templates": "src/templates",
         },
-        extensions: ["js"]
-      }
+        extensions: ["js"],
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `posts`,
-        path: `${__dirname}/posts`
-      }
+        name: `episodes`,
+        path: `${__dirname}/episodes`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/pages`
-      }
-    }
-  ]
+        path: `${__dirname}/pages`,
+      },
+    },
+  ],
 }

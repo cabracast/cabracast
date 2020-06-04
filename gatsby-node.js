@@ -1,7 +1,7 @@
-const path = require('path')
+const path = require("path")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-const getQuery = (context) => (`
+const getQuery = context => `
   query {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date]},
@@ -16,7 +16,7 @@ const getQuery = (context) => (`
       }
     }
   }
-`)
+`
 
 const create = async (actions, graphql, context, component) => {
   const query = getQuery(context)
@@ -35,7 +35,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
     let slug = createFilePath({ node, getNode })
-    slug = slug.replace(/\//g, '');
+    slug = slug.replace(/\//g, "")
     console.log(slug)
     createNodeField({
       node,
@@ -46,6 +46,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 }
 
 exports.createPages = async ({ actions, graphql }) => {
-  await create(actions, graphql, 'posts', 'templates/Blog/Posts/index.js')
-  await create(actions, graphql, 'pages', 'templates/Pages/Default/index.js')
+  await create(
+    actions,
+    graphql,
+    "episodes",
+    "templates/Podcast/Episodes/index.js"
+  )
+  await create(actions, graphql, "pages", "templates/Pages/Default/index.js")
 }
