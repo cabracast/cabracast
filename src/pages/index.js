@@ -3,16 +3,16 @@ import { graphql } from "gatsby"
 import SEO from "../components/SEO"
 
 const IndexPage = ({ data }) => {
-  const { pages, posts } = data
+  const { pages, episodes } = data
   const { edges: dataPages } = pages
-  const { edges: dataPosts } = posts
+  const { edges: dataEpisodes } = episodes
   console.log(dataPages)
   return (
     <>
-      <SEO title="página principal" />
-      <h1>Posts</h1>
+      <SEO title="CabraCast" />
+      <h1>Nossos Episódios</h1>
       <ul>
-        {dataPosts.map(post => (
+        {dataEpisodes.map(post => (
           <li>
             <h2>{post.node.frontmatter.title}</h2>
             <h3>{post.node.frontmatter.date}</h3>
@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => {
           </li>
         ))}
       </ul>
-      <h1>Pages</h1>
+      <h1>Páginas Internas</h1>
       <ul>
         {dataPages.map(page => (
           <li>
@@ -57,7 +57,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    posts: allMarkdownRemark(
+    episodes: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { fileAbsolutePath: { regex: "/(episodes).*.md$/" } }
     ) {

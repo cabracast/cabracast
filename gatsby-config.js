@@ -1,11 +1,10 @@
 module.exports = {
-  pathPrefix: "/gatsby-simple-blog",
   siteMetadata: {
-    title: `John Doe`,
-    position: `Backend Developer`,
-    description: `A blog about backend development and other cool stuff.`,
-    author: `@myblog`,
-    siteUrl: `http://www.diogocezar.github.io/gatsby-simple-blog`,
+    title: `CabraCast`,
+    position: ``,
+    description: ``,
+    author: `@cabracast`,
+    siteUrl: `https://cabracast.github.io/`,
   },
   plugins: [
     "gatsby-transformer-remark",
