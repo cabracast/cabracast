@@ -1,7 +1,7 @@
 {
-  "name": "cabracast",
+  "name": "cabracast.github.io",
   "private": true,
-  "description": "Just our podcast website",
+  "description": "Just our CabraCast Website",
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
