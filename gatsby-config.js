@@ -1,4 +1,4 @@
-const { feed, metadata } = require("./configs")
+const { feed: feedOptions, metadata } = require("./configs")
 
 module.exports = {
   siteMetadata: metadata,
@@ -36,7 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-podcast-feed`,
       options: {
-        feed,
+        feedOptions,
       },
     },
   ],
