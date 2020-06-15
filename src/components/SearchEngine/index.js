@@ -2,7 +2,7 @@ import React from "react"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function Seo({ description, lang, meta, title, image }) {
+function SearchEngine({ description, lang, meta, title, image }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -32,19 +32,19 @@ function Seo({ description, lang, meta, title, image }) {
       meta={[
         {
           name: `description`,
-          content: metaDescription || '',
+          content: metaDescription || "",
         },
         {
           property: `og:title`,
-          content: title || '',
+          content: title || "",
         },
         {
           property: `og:description`,
-          content: metaDescription || '',
+          content: metaDescription || "",
         },
         {
           property: `og:image`,
-          content: ogImage || '',
+          content: ogImage || "",
         },
         {
           property: `og:type`,
@@ -56,23 +56,23 @@ function Seo({ description, lang, meta, title, image }) {
         },
         {
           name: `twitter:image:src`,
-          content: ogImage || '',
+          content: ogImage || "",
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author || '',
+          content: site.siteMetadata.author || "",
         },
         {
           name: `twitter:title`,
-          content: title || '',
+          content: title || "",
         },
         {
           name: `twitter:description`,
-          content: metaDescription || '',
-        }
+          content: metaDescription || "",
+        },
       ]}
     />
   )
 }
 
-export default Seo
+export default SearchEngine

@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Seo from "@components/Seo"
+import SearchEngine from "@components/SearchEngine"
 import GlobalStyles from "@components/GlobalStyles"
 
 const Index = ({ data }) => {
@@ -9,7 +9,7 @@ const Index = ({ data }) => {
   return (
     <>
       <GlobalStyles />
-      <Seo title="CabraCast" />
+      <SearchEngine title="CabraCast" />
       <ul>
         <li>
           <a href="/contact">Contato</a>
