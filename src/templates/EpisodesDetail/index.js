@@ -6,7 +6,6 @@ import * as S from "./styles"
 export const Episodes = ({ data: { markdownRemark } }) => {
   const { frontmatter, html } = markdownRemark
   const { number, title, date, time, authors } = frontmatter
-  console.log(frontmatter)
   return (
     <>
       <SEO title={title} />

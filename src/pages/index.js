@@ -1,34 +1,29 @@
 import React from "react"
 import { graphql } from "gatsby"
-import SEO from "../components/SEO"
+import SEO from "@components/SEO"
 
-const IndexPage = ({ data }) => {
-  const { pages, episodes } = data
-  const { edges: dataPages } = pages
+const Main = ({ data }) => {
+  const { episodes } = data
   const { edges: dataEpisodes } = episodes
   return (
     <>
       <SEO title="CabraCast" />
+      <ul>
+        <li>
+          <a href="/contact">Contato</a>
+        </li>
+        <li>
+          <a href="/team">Os Cabras</a>
+        </li>
+      </ul>
       <h1>Nossos Episódios</h1>
       <ul>
-        {dataEpisodes.map(post => (
-          <li>
-            <h2>{post.node.frontmatter.title}</h2>
-            <h3>{post.node.frontmatter.date}</h3>
-            <a href={`/episodes/${post.node.fields.slug}`}>
-              {post.node.fields.slug}
-            </a>
-          </li>
-        ))}
-      </ul>
-      <h1>Páginas Internas</h1>
-      <ul>
-        {dataPages.map(page => (
-          <li>
-            <h2>{page.node.frontmatter.title}</h2>
-            <h3>{page.node.frontmatter.date}</h3>
-            <a href={`/pages/${page.node.fields.slug}`}>
-              {page.node.fields.slug}
+        {dataEpisodes.map((item, index) => (
+          <li key={index}>
+            <h2>{item.node.frontmatter.title}</h2>
+            <h3>{item.node.frontmatter.date}</h3>
+            <a href={`/episodes/${item.node.fields.slug}`}>
+              {item.node.fields.slug}
             </a>
           </li>
         ))}
@@ -39,26 +34,9 @@ const IndexPage = ({ data }) => {
 
 export const pageQuery = graphql`
   query {
-    pages: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: { regex: "/(pages).*.md$/" } }
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 300)
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "DD/MM/YYYY")
-            title
-          }
-        }
-      }
-    }
     episodes: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: { regex: "/(episodes).*.md$/" } }
+      filter: { fileAbsolutePath: { regex: "/data/(episodes).*.md$/" } }
     ) {
       edges {
         node {
@@ -76,4 +54,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default IndexPage
+export default Main

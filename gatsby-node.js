@@ -5,7 +5,7 @@ const getQuery = context => `
   query {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date]},
-      filter: {fileAbsolutePath: {regex: "/(${context}).*.md$/"}}
+      filter: {fileAbsolutePath: {regex: "/data/(${context}).*.md$/"}}
     ){
       edges {
         node {
@@ -36,7 +36,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   if (node.internal.type === `MarkdownRemark`) {
     let slug = createFilePath({ node, getNode })
     slug = slug.replace(/\//g, "")
-    console.log(slug)
     createNodeField({
       node,
       name: `slug`,
@@ -50,7 +49,6 @@ exports.createPages = async ({ actions, graphql }) => {
     actions,
     graphql,
     "episodes",
-    "templates/Podcast/Episodes/index.js"
+    "templates/EpisodesDetail/index.js"
   )
-  await create(actions, graphql, "pages", "templates/Pages/Default/index.js")
 }
