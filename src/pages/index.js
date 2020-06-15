@@ -1,13 +1,15 @@
 import React from "react"
 import { graphql } from "gatsby"
-import SEO from "@components/SEO"
+import Seo from "@components/Seo"
+import GlobalStyles from "@components/GlobalStyles"
 
-const Main = ({ data }) => {
+const Index = ({ data }) => {
   const { episodes } = data
   const { edges: dataEpisodes } = episodes
   return (
     <>
-      <SEO title="CabraCast" />
+      <GlobalStyles />
+      <Seo title="CabraCast" />
       <ul>
         <li>
           <a href="/contact">Contato</a>
@@ -54,4 +56,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default Main
+export default Index

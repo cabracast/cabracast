@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import SEO from "@components/SEO"
 import * as S from "./styles"
 
 export const Episodes = ({ data: { markdownRemark } }) => {
@@ -8,7 +7,6 @@ export const Episodes = ({ data: { markdownRemark } }) => {
   const { number, title, date, time, authors } = frontmatter
   return (
     <>
-      <SEO title={title} />
       <S.Title>{title}</S.Title>
       <p>{number}</p>
       <p>{date}</p>

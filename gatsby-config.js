@@ -14,6 +14,7 @@ module.exports = {
           "@styles": "src/styles",
           "@pages": "src/pages",
           "@templates": "src/templates",
+          "@validations": "src/validations",
         },
         extensions: ["js"],
       },
