@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import SearchEngine from "@components/SearchEngine"
 import GlobalStyles from "@components/GlobalStyles"
+import Header from "@components/Header"
 
 const Index = ({ data }) => {
   const { episodes } = data
@@ -9,6 +10,7 @@ const Index = ({ data }) => {
   return (
     <>
       <GlobalStyles />
+      <Header />
       <SearchEngine title="CabraCast" />
       <ul>
         <li>

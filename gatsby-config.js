@@ -11,6 +11,8 @@ module.exports = {
         alias: {
           "@src": "src",
           "@components": "src/components",
+          "@images": "src/images",
+          "@objects": "src/objects",
           "@styles": "src/styles",
           "@pages": "src/pages",
           "@templates": "src/templates",
