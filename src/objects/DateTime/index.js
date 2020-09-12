@@ -1,7 +1,9 @@
 import React from "react"
 
-const Container = () => {
-  return <div></div>
+import StyledDateTime from "@objects/DateTime/styles"
+
+const DateTime = ({ children }) => {
+  return <StyledDateTime>{children}</StyledDateTime>
 }
 
-export default Container
+export default DateTime

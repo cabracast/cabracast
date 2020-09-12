@@ -1,7 +1,9 @@
 import React from "react"
 
-const Container = () => {
-  return <div></div>
+import StyledTitle from "@objects/Title/styles"
+
+const Title = ({ children }) => {
+  return <StyledTitle>{children}</StyledTitle>
 }
 
-export default Container
+export default Title

@@ -1,7 +1,7 @@
 const path = require("path")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-const getQuery = context => `
+const getQuery = (context) => `
   query {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date]},
@@ -21,7 +21,7 @@ const getQuery = context => `
 const create = async (actions, graphql, context, component) => {
   const query = getQuery(context)
   const { data } = await graphql(query)
-  data.allMarkdownRemark.edges.forEach(edge => {
+  data.allMarkdownRemark.edges.forEach((edge) => {
     const { slug } = edge.node.fields
     actions.createPage({
       path: `/${context}/${slug}`,

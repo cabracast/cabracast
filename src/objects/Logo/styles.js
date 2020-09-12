@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const StyledLogo = styled.img`
-  height: 70px;
+  height: 65px;
 `
 
 export default StyledLogo

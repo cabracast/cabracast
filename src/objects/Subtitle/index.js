@@ -1,7 +1,9 @@
 import React from "react"
 
-const Container = () => {
-  return <div></div>
+import StyledSubtitle from "@objects/Subtitle/styles"
+
+const Subtitle = ({ children }) => {
+  return <StyledSubtitle>{children}</StyledSubtitle>
 }
 
-export default Container
+export default Subtitle

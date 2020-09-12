@@ -3,6 +3,12 @@ import { createGlobalStyle } from "styled-components"
 const Settings = createGlobalStyle`
   :root {
     --color-gray: #2E3648;
+    --color-gray-light: #4D5565;
+    --color-gray-lighter: #9D9D9D;
+    --color-white: #FFF;
+
+    --size-header: 90px;
+    --size-max-width: 1400px;
 
     --size-s1: 15px;
     --size-s2: 20px;

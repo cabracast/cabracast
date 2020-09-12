@@ -1,7 +1,9 @@
 import React from "react"
 
-const Container = () => {
-  return <div></div>
+import StyledButton from "@objects/Button/styles"
+
+const Button = (props) => {
+  return <StyledButton {...props}>{props.children}</StyledButton>
 }
 
-export default Container
+export default Button

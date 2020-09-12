@@ -3,35 +3,23 @@ import { graphql } from "gatsby"
 import SearchEngine from "@components/SearchEngine"
 import GlobalStyles from "@components/GlobalStyles"
 import Header from "@components/Header"
+import Content from "@components/Content"
+import List from "@components/List"
+import Footer from "@components/Footer"
+
+import { transformEpisodes } from "@helpers"
 
 const Index = ({ data }) => {
-  const { episodes } = data
-  const { edges: dataEpisodes } = episodes
+  const dataEpisodes = transformEpisodes(data)
   return (
     <>
       <GlobalStyles />
-      <Header />
       <SearchEngine title="CabraCast" />
-      <ul>
-        <li>
-          <a href="/contact">Contato</a>
-        </li>
-        <li>
-          <a href="/team">Os Cabras</a>
-        </li>
-      </ul>
-      <h1>Nossos Episódios</h1>
-      <ul>
-        {dataEpisodes.map((item, index) => (
-          <li key={index}>
-            <h2>{item.node.frontmatter.title}</h2>
-            <h3>{item.node.frontmatter.date}</h3>
-            <a href={`/episodes/${item.node.fields.slug}`}>
-              {item.node.fields.slug}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <Header />
+      <Content>
+        <List data={dataEpisodes}></List>
+      </Content>
+      <Footer />
     </>
   )
 }

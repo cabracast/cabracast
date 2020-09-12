@@ -3,9 +3,9 @@ const { feed: feedOptions, metadata } = require("./configs")
 module.exports = {
   siteMetadata: metadata,
   plugins: [
+    `gatsby-plugin-styled-components`,
     "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-styled-components",
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
@@ -18,6 +18,7 @@ module.exports = {
           "@pages": "src/pages",
           "@templates": "src/templates",
           "@validations": "src/validations",
+          "@helpers": "src/helpers",
         },
         extensions: ["js"],
       },
