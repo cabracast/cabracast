@@ -8,10 +8,33 @@ const transformEpisodes = (data) => {
     return {
       title,
       date,
-      slug,
       text,
+      slug,
     }
   })
 }
 
-export { transformEpisodes }
+const transformTeam = (data) => {
+  const { team } = data
+  const { edges } = team
+  return edges.map((item) => {
+    const {
+      name,
+      subTitle,
+      description,
+      image,
+      twitter,
+    } = item.node.frontmatter
+    const { slug } = item.node.fields
+    return {
+      name,
+      subTitle,
+      description,
+      image,
+      twitter,
+      slug,
+    }
+  })
+}
+
+export { transformEpisodes, transformTeam }

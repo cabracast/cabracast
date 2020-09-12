@@ -7,11 +7,13 @@ import {
   StyledSubtitle,
 } from "@objects/Image/styles"
 
-const Image = ({ title, subtitle }) => {
+const Image = ({ title, subtitle, src }) => {
   return (
     <StyledImageContainer>
       <div className="moldure">
-        <StyledImage src="assets/images/cabracast-cabra.svg"></StyledImage>
+        <StyledImage
+          src={src || "assets/images/cabracast-cabra.svg"}
+        ></StyledImage>
         <StyledTitle>{title}</StyledTitle>
         <StyledSubtitle>{subtitle}</StyledSubtitle>
       </div>

@@ -8,6 +8,7 @@ const StyledImageContainer = styled.div`
   display: flex;
   justify-content: center;
   .moldure {
+    padding: var(--size-s2);
     background-color: var(--color-gray);
     border-radius: 30px;
     width: 100%;

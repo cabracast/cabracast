@@ -1,7 +1,9 @@
 import React from "react"
 
-const Container = () => {
-  return <div></div>
+import StyledInput from "@objects/Input/styles"
+
+const Input = (props) => {
+  return <StyledInput {...props}></StyledInput>
 }
 
-export default Container
+export default Input

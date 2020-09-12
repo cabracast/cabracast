@@ -1,21 +1,25 @@
 import React from "react"
 import { graphql } from "gatsby"
+import SearchEngine from "@components/SearchEngine"
+import GlobalStyles from "@components/GlobalStyles"
+import Header from "@components/Header"
+import Content from "@components/Content"
+import ListTeam from "@components/ListTeam"
+import Footer from "@components/Footer"
+
+import { transformTeam } from "@helpers"
 
 const Team = ({ data }) => {
-  const { team } = data
-  const { edges: dateTeam } = team
+  const dataTeam = transformTeam(data)
   return (
     <>
-      <h1>Nosso Time</h1>
-      <ul>
-        {dateTeam.map((item, index) => (
-          <li key={index}>
-            <h2>{item.node.frontmatter.name}</h2>
-            <h3>{item.node.frontmatter.subTitle}</h3>
-          </li>
-        ))}
-      </ul>
-      <a href="/">Voltar</a>
+      <GlobalStyles />
+      <SearchEngine title="CabraCast" />
+      <Header />
+      <Content>
+        <ListTeam data={dataTeam}></ListTeam>
+      </Content>
+      <Footer />
     </>
   )
 }
