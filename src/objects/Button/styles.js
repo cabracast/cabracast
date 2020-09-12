@@ -11,7 +11,7 @@ const StyledButton = styled.button`
   font-family: "Futura-Bold";
   padding: 15px 40px;
   min-width: 250px;
-  margin-top: var(--size-s4);
+  margin-top: var(--size-s3);
   position: relative;
   float: left;
   cursor: pointer;

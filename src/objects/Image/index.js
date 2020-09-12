@@ -1,13 +1,20 @@
 import React from "react"
 
-import { StyledImage, StyledImageContainer } from "@objects/Image/styles"
-
-import ImageCabra from "@images/cabracast-cabra.svg"
+import {
+  StyledImage,
+  StyledImageContainer,
+  StyledTitle,
+  StyledSubtitle,
+} from "@objects/Image/styles"
 
 const Image = ({ title, subtitle }) => {
   return (
     <StyledImageContainer>
-      <StyledImage src={ImageCabra}></StyledImage>
+      <div className="moldure">
+        <StyledImage src="assets/images/cabracast-cabra.svg"></StyledImage>
+        <StyledTitle>{title}</StyledTitle>
+        <StyledSubtitle>{subtitle}</StyledSubtitle>
+      </div>
     </StyledImageContainer>
   )
 }

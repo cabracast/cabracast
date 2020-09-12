@@ -6,6 +6,7 @@ const StyledHeader = styled.header`
   position: fixed;
   height: var(--size-header);
   width: 100%;
+  z-index: 100;
 `
 
 const StyledPosition = styled.div`

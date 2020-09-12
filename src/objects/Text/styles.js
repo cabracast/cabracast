@@ -4,7 +4,7 @@ const StyledTitle = styled.h2`
   font-size: 1.2rem;
   font-family: "Futura-Book";
   color: var(--color-gray);
-  padding-top: var(--size-s3);
+  padding-top: var(--size-s2);
   line-height: 2.2rem;
 `
 

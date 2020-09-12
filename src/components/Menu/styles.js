@@ -9,11 +9,11 @@ const StyledMenu = styled.div`
     li {
       list-style: none;
       a {
-        font-family: "Futura-Book";
+        font-family: "Futura-Bold";
         color: white;
         text-transform: uppercase;
         text-decoration: none;
-        font-size: 1.55rem;
+        font-size: 1.4rem;
       }
     }
   }

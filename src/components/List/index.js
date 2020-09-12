@@ -1,6 +1,6 @@
 import React from "react"
 
-import StyledList from "@components/List/styles"
+import { StyledList, StyledDecoration } from "@components/List/styles"
 
 import {
   ContainerImage,
@@ -27,7 +27,8 @@ const List = ({ data }) => {
             <li key={index}>
               <ContainerList>
                 <ContainerImage>
-                  <Image></Image>
+                  <StyledDecoration />
+                  <Image title="CabraCast" subtitle="v2.0.0" />
                 </ContainerImage>
                 <ContainerItems>
                   <Title>{title}</Title>

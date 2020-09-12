@@ -6,6 +6,7 @@ const Settings = createGlobalStyle`
     --color-gray-light: #4D5565;
     --color-gray-lighter: #9D9D9D;
     --color-white: #FFF;
+    --color-yellow: #F6F06A;
 
     --size-header: 90px;
     --size-max-width: 1400px;
