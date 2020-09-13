@@ -39,6 +39,10 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "DD/MM/YYYY")
             title
+            version
+            url
+            time
+            subtitle
           }
         }
       }

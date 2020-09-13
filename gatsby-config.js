@@ -10,6 +10,7 @@ module.exports = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
+          "@root": "./",
           "@src": "src",
           "@components": "src/components",
           "@images": "src/images",

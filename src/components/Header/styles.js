@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import media from "styled-media-query"
 
 const StyledHeader = styled.header`
   top: 0;
@@ -7,6 +8,9 @@ const StyledHeader = styled.header`
   height: var(--size-header);
   width: 100%;
   z-index: 100;
+  ${media.lessThan("medium")`
+    height: var(--size-header-small);
+  `}
 `
 
 const StyledPosition = styled.div`
@@ -14,6 +18,9 @@ const StyledPosition = styled.div`
   justify-content: space-between;
   align-items: center;
   height: var(--size-header);
+  ${media.lessThan("medium")`
+    height: var(--size-header-small);
+  `}
 `
 
 export { StyledHeader, StyledPosition }

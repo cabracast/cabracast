@@ -9,7 +9,10 @@ const Settings = createGlobalStyle`
     --color-yellow: #F6F06A;
 
     --size-header: 90px;
-    --size-max-width: 1400px;
+    --size-header-small: 75px;
+    --size-max-width-huge: 1440px;
+    --size-max-width-large: 1170px;
+    --size-max-width-medium: 768px;
 
     --size-s1: 15px;
     --size-s2: 20px;

@@ -20,7 +20,6 @@ const ListTeam = ({ data }) => {
       <ul>
         {data.map((item, index) => {
           const { name, subTitle, description, image, twitter } = item
-          console.log(item)
           return (
             <li key={index}>
               <ContainerList>

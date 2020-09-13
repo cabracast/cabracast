@@ -5,11 +5,15 @@ import StyledFooter from "@components/Footer/styles"
 import Logo from "@objects/Logo"
 import { Container } from "@components/Container"
 
+import { metadata } from "@root/configs"
+
 const Footer = () => {
   return (
     <StyledFooter>
       <Container>
-        <Logo size="80"></Logo>
+        <a href={metadata.siteUrl}>
+          <Logo size="80"></Logo>
+        </a>
       </Container>
     </StyledFooter>
   )

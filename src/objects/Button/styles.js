@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import media from "styled-media-query"
 
 const StyledButton = styled.button`
   background-color: var(--color-gray-light);
@@ -20,4 +21,15 @@ const StyledButton = styled.button`
   }
 `
 
-export default StyledButton
+const StyledWrapper = styled.div`
+  position: relative;
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  ${media.lessThan("medium")`
+    justify-content: center;
+  `}
+`
+
+export { StyledButton, StyledWrapper }

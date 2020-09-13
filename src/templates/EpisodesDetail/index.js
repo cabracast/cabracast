@@ -25,9 +25,9 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "DD/MM/YYYY")
         title
-        number
+        version
         time
-        authors
+        participants
       }
     }
   }

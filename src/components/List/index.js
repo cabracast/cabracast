@@ -22,23 +22,23 @@ const List = ({ data }) => {
     <StyledList>
       <ul>
         {data.map((item, index) => {
-          const { title, date, text } = item
+          const { title, date, text, version, subtitle, time, url } = item
           return (
             <li key={index}>
               <ContainerList>
                 <ContainerImage>
                   <StyledDecoration />
-                  <Image title="CabraCast" subtitle="v2.0.0" />
+                  <Image title="CabraCast" subtitle={version} />
                 </ContainerImage>
                 <ContainerItems>
                   <Title>{title}</Title>
-                  <Subtitle>
-                    Casa inteligente ou privacidade? Faça a sua escolha.
-                  </Subtitle>
+                  <Subtitle>{subtitle}</Subtitle>
                   <DateTime>{date}</DateTime>
-                  <Duration>42 minutos</Duration>
+                  <Duration>{time}</Duration>
                   <Text>{text}</Text>
-                  <Button>Youtube</Button>
+                  <a href={url} target="_blank">
+                    <Button>Youtube</Button>
+                  </a>
                 </ContainerItems>
               </ContainerList>
             </li>

@@ -1,9 +1,13 @@
 import React from "react"
 
-import StyledButton from "@objects/Button/styles"
+import { StyledWrapper, StyledButton } from "@objects/Button/styles"
 
 const Button = (props) => {
-  return <StyledButton {...props}>{props.children}</StyledButton>
+  return (
+    <StyledWrapper>
+      <StyledButton {...props}>{props.children}</StyledButton>
+    </StyledWrapper>
+  )
 }
 
 export default Button

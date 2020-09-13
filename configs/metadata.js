@@ -3,5 +3,5 @@ module.exports = {
   position: ``,
   description: ``,
   author: `@cabracast`,
-  siteUrl: `https://cabracast.github.io/`,
+  siteUrl: `https://www.cabracast.com`,
 }
