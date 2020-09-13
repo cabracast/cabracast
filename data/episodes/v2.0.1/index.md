@@ -1,4 +1,5 @@
 ---
+number: "2"
 version: "v2.0.1"
 title: "CASA INTELIGENTE OU PRIVACIDADE?"
 subtitle: "Faça a sua escolha"

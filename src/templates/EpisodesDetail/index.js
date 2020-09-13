@@ -4,14 +4,14 @@ import * as S from "./styles"
 
 export const Episodes = ({ data: { markdownRemark } }) => {
   const { frontmatter, html } = markdownRemark
-  const { number, title, date, time, authors } = frontmatter
+  const { version, title, date, time, participants } = frontmatter
   return (
     <>
       <S.Title>{title}</S.Title>
-      <p>{number}</p>
+      <p>{version}</p>
       <p>{date}</p>
       <p>{time}</p>
-      <p>{authors}</p>
+      <p>{participants}</p>
       <div dangerouslySetInnerHTML={{ __html: html }} />
       <a href="/">Voltar</a>
     </>

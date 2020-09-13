@@ -1,4 +1,5 @@
 ---
+number: "1"
 version: "v2.0.0"
 title: "INTEGRANTE NOVO"
 subtitle: "Novidades da nossa segunda temporada"
