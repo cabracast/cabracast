@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="311" viewBox="0 0 1920 311">
+  <g id="Group_118" data-name="Group 118" transform="translate(0 -1902)">
+    <g id="Rectangle_10" data-name="Rectangle 10" transform="translate(0 1902)" fill="#2e3648" stroke="#707070" stroke-width="1">
+      <rect width="1920" height="311" stroke="none"/>
+      <rect x="0.5" y="0.5" width="1919" height="310" fill="none"/>
+    </g>
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="35.75" cy="35.75" r="35.75" transform="translate(1386 2051)" fill="#fff"/>
+    <path id="github" d="M18.683,34.453c-8.122,2.4-8.122-4.061-11.383-4.919m22.766,9.781V33.023a5.584,5.584,0,0,0-1.544-4.233c5.091-.572,10.468-2.517,10.468-11.383a8.751,8.751,0,0,0-2.46-6.12,8.1,8.1,0,0,0-.172-6.12s-1.945-.572-6.349,2.4a21.36,21.36,0,0,0-11.383,0c-4.462-2.974-6.349-2.4-6.349-2.4a8.1,8.1,0,0,0-.172,6.12,8.751,8.751,0,0,0-2.46,6.12c0,8.809,5.377,10.754,10.468,11.383a5.458,5.458,0,0,0-1.544,4.176v6.292" transform="translate(1398.148 2064.753)" fill="none" stroke="#2e3648" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5"/>
+  </g>
+</svg>
